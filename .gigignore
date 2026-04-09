@@ -9,10 +9,10 @@ __pycache__/
 venv/
 .env
 
-# Dataset (VERY IMPORTANT - do not upload)
+# Dataset (VERY IMPORTANT - do not upload the dataset)
 data/
 
-# Model files (can get large)
+# Model files (because the files can get so large)
 *.h5
 *.pth
 *.pt
