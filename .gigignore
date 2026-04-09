@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env
+
+# Dataset (VERY IMPORTANT - do not upload)
+data/
+
+# Model files (can get large)
+*.h5
+*.pth
+*.pt
+
+# System files
+.DS_Store
