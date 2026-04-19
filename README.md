@@ -10,7 +10,7 @@ We implemented a transfer learning approach using a pretrained convolutional neu
 We used the Chest X-Ray Pneumonia dataset from Kaggle:  
 https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
-- Total images: ~5,800  
+- Total images: ~5,863  
 - Classes: Normal, Pneumonia  
 - Pre-split into training, validation, and testing sets  
 
