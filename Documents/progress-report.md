@@ -1,14 +1,18 @@
-# Chest X-RAy Images(Pneumonia) - Progress Report
+# Chest X-Ray Images(Pneumonia) - Progress Report
 
 **Team Members:** Jesus Villa, Derek Shin, Momoka Aung, Gauri Chahal, Joshua Encinas
+
 **Project Lead:** (Project leader name here)
+
 **Date:** April 19, 2026
 
 ---
 
 ## Project Overview
 
-**Chest X-Ray Pneumonia** Detection aims to develop machine learning models that classify chest X-ray images as Normal or Pneumonia using a publicly available medical imaging dataset. Our project employs two modeling approaches: (1) traditional machine learning methods such as Support Vector Machines (SVMs), and (2) deep learning models using Convolutional Neural Networks (CNNs) for image-based classification. By analyzing pixel-level patterns and visual indicators associated with lung abnormalities, we aim to identify key features that contribute to accurate pneumonia detection. This project demonstrates the effectiveness of machine learning techniques in medical image classification and provides insight into model performance, optimization strategies, and real-world healthcare applications.
+Chest X-Ray Pneumonia detection aims to develop machine learning models that classify chest X-ray images as Normal or Pneumonia using a publicly available medical imaging dataset. Our project employs two modeling approaches: (1) traditional machine learning methods such as Support Vector Machines (SVMs), and (2) deep learning models using Convolutional Neural Networks (CNNs) for image-based classification. By analyzing pixel-level patterns and visual indicators associated with lung abnormalities, we aim to identify key features that contribute to accurate pneumonia detection. This project demonstrates the effectiveness of machine learning techniques in medical image classification and provides insight into model performance, optimization strategies, and real-world healthcare applications.
+
+
 ---
 
 ## Team Member Responsibilities
