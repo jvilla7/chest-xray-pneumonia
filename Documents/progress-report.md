@@ -17,7 +17,7 @@ Chest X-Ray Pneumonia detection aims to develop machine learning models that cla
 - **Jesus Villa (Project Lead):** Project coordination, model selection strategy, baseline CNN implementation, ensures integration of all components
 - **Derek Shin:** Data preprocessing (image resizing, normalization), dataset organization, data augmentation implementation
 - **Momoka Aung:** Exploratory data analysis (class distribution, sample inspection), dataset visualization, preprocessing validation
-- **(team member name here):** Model improvement and optimization, hyperparameter tuning, implementation of additional models (CNN variations or SVM)
+- **Gauri Chahal:** Model improvement and optimization, hyperparameter tuning, implementation of additional models (CNN variations or SVM)
 - **Joshua Encinas:** Performance analysis, confusion matrix and metrics evaluation, visualization of results, documentation and report preparation
 
 ---
