@@ -18,7 +18,7 @@ Chest X-Ray Pneumonia detection aims to develop machine learning models that cla
 - **Derek Shin:** Data preprocessing (image resizing, normalization), dataset organization, data augmentation implementation
 - **Momoka Aung:** Exploratory data analysis (class distribution, sample inspection), dataset visualization, preprocessing validation
 - **(team member name here):** Model improvement and optimization, hyperparameter tuning, implementation of additional models (CNN variations or SVM)
-- **(team member name here):** Performance analysis, confusion matrix and metrics evaluation, visualization of results, documentation and report preparation
+- **Joshua Encinas:** Performance analysis, confusion matrix and metrics evaluation, visualization of results, documentation and report preparation
 
 ---
 
