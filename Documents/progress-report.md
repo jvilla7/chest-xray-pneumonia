@@ -1,7 +1,7 @@
 # Chest X-Ray Images(Pneumonia) - Progress Report
 
 **Team Members:** Jesus Villa, Derek Shin, Momoka Aung, Gauri Chahal, Joshua Encinas
-**Project Lead:** (Project leader name here)
+**Project Lead:** (Project leader name here)t
 **Date:** April 19, 2026
 
 ---
