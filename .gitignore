@@ -11,6 +11,9 @@ venv/
 
 # Dataset (VERY IMPORTANT - do not upload the dataset)
 data/
+*.keras
+_pycache__/
+.ipynb_checkpoints/
 
 # Model files (because the files can get so large)
 *.h5
