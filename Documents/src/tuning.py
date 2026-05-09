@@ -1,3 +1,8 @@
+#hyperparameter tuning module
+# testing epochs, batch size, learning rate, and optimizer choice
+
+
+
 def tune_hyperparameters(model, X_train, y_train, X_val, y_val):
     # placeholder for future hyperparameter tuning
 
