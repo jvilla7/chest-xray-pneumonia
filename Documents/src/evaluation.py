@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 
 
-def evaluate_model(model, X_test, y_test):
+def evaluate_model(model, X_test, y_test, history):
     # evaluate performance on test set
     loss, accuracy = model.evaluate(X_test, y_test)
 
