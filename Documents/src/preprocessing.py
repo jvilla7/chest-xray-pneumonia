@@ -3,8 +3,9 @@ import numpy as np
 import tensorflow as tf
 
 IMG_SIZE = 128
-DATASET_DIR = "chest_xray"
-
+# add datSET DIR as a global variable for easier access across modules
+#DATASET_DIR = "chest_xray"
+DATASET_DIR = r"C:\Users\jvilla24\Documents\GitHub\chest-xray-pneumonia\Documents\data\chest_xray\chest_xray"
 
 def load_images(folder):
     X = []
@@ -52,3 +53,23 @@ def load_data():
 def preprocess_data(X, y):
     X = X.astype("float32") / 255.0
     return X, y
+
+
+def create_data_generator(X_train, y_train, batch_size=32):
+    """Create data generator with augmentation for training."""
+    from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+    datagen = ImageDataGenerator(
+        rotation_range=20,
+        width_shift_range=0.1,
+        height_shift_range=0.1,
+        shear_range=0.1,
+        zoom_range=0.1,
+        horizontal_flip=True,
+        fill_mode='nearest'
+    )
+
+    # Fit the generator on training data
+    datagen.fit(X_train)
+
+    return datagen.flow(X_train, y_train, batch_size=batch_size)
