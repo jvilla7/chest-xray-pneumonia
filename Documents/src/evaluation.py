@@ -56,7 +56,7 @@ def evaluate_model(model, X_test, y_test, history=None):
         )
     )
 
-    # Confusion matrix
+    # Confusion matrix 
     cm = confusion_matrix(y_test, y_pred)
 
     display = ConfusionMatrixDisplay(
