@@ -20,11 +20,12 @@ This project builds a deep learning system to classify chest X-ray images as eit
 Pneumonia is a leading cause of respiratory illness worldwide, and rapid detection using medical imaging can support clinical diagnosis. Chest X-rays are commonly used in clinical settings, making automated image classification a valuable tool for assisting healthcare providers.
 
 ## 1.2 Problem Statement
-The goal is to develop a machine learning model that can distinguish between normal chest X-rays and X-rays showing pneumonia, using a publicly available dataset and a convolutional neural network architecture.
+The goal is to develop machine learning models that can distinguish between normal chest X-rays and X-rays showing pneumonia, using a publicly available dataset and comparing convolutional neural network and SVM approaches.
 
 ## 1.3 Objectives
 - Load and preprocess chest X-ray images from the Kaggle pneumonia dataset.
 - Train a CNN model that can classify images as Normal or Pneumonia.
+- Compare CNN performance with a traditional SVM baseline.
 - Evaluate model performance on a held-out test set.
 - Analyze the model using classification reports, confusion matrix, and ROC curves.
 
@@ -33,6 +34,7 @@ The goal is to develop a machine learning model that can distinguish between nor
 - Developed data loading and preprocessing utilities for grayscale chest X-ray images.
 - Created an evaluation pipeline that generates metric reports and plots.
 - Introduced hyperparameter tuning configuration for model training.
+- Added SVM baseline for traditional ML comparison.
 
 ---
 
