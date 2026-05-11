@@ -1,10 +1,18 @@
 # Chest X-Ray Images (Pneumonia) - Final Report
 
-**Team Members:** Jesus Villa, Derek Shin, Momoka Aung, Gauri Chahal, Joshua Encinas
-**Project Lead:** Jesus Villa
+**Team Members:** Jesus Villa, Derek Shin, Momoka Aung, Gauri Chahal, Joshua Encinas  
+**Project Lead:** Jesus Villa  
+
+## Team Member Responsibilities
+- **Jesus Villa (Project Lead):** Project lead, repository integration, fina training pipeline, report coordination  
+- **Derek Shin:** CNN architecture, preprocessing review, augmentation support
+- **Momoka Aung:** Dataset organization, preprocessing review, augmentation support 
+- **Gauri Chahal:** Evaluation metrics, result interpretation, presentation support
+- **Joshua Encinas:** SVM baseline, comparison analysis, documentation support  
+
 Department of Computer Science  
 California State University Los Angeles  
-Course: CS4662 — Advanced Machine & Deep Learning
+Course: CS4662 — Advanced Machine & Deep Learning  
 **Date:** May 10, 2026
 
 ---
