@@ -150,10 +150,10 @@ The following table summarizes the key performance metrics for both models:
 ## 5.4 Accuracy and Loss Curves
 
 ### Training and Validation Accuracy
-![Training and Validation Accuracy](Figures/plots/training_and_validation_accuracy.png)
+<img src="Figures/plots/training_and_validation_accuracy.png" width="450" alt="Training and Validation Accuracy">
 
 ### Training and Validation Loss
-![Training and Validation Loss](Figures/plots/training_and_validation_loss.png)
+<img src="Figures/plots/training_and_validation_loss.png" width="450" alt="Training and Validation Loss">
 
 The evaluation module plots both training and validation accuracy and loss to help diagnose underfitting, overfitting, and training stability. The accuracy curve shows steady improvement with data augmentation, while the loss curve demonstrates effective regularization through dropout.
 
@@ -164,12 +164,12 @@ The evaluation module plots both training and validation accuracy and loss to he
 ## 6.1 Confusion Matrix
 
 ### CNN Confusion Matrix
-![CNN Confusion Matrix](Figures/plots/confusion_matrix.png)
+<img src="Figures/plots/confusion_matrix.png" width="450" alt="CNN Confusion Matrix">
 
 A confusion matrix is generated to show true positives, true negatives, false positives, and false negatives for the test set. The CNN matrix shows strong performance on identifying Pneumonia cases (high true positive rate) with improved normal case detection (72% recall) compared to the baseline.
 
 ### SVM Confusion Matrix for Comparison
-![SVM Confusion Matrix](Figures/plots/svm_confusion_matrix.png)
+<img src="Figures/plots/svm_confusion_matrix.png" width="450" alt="SVM Confusion Matrix">
 
 The SVM confusion matrix demonstrates lower overall performance and particularly weaker recall for normal cases (34%), highlighting the advantage of deep learning for medical image classification.
 
@@ -179,7 +179,7 @@ The model evaluation includes a classification report with metrics for each clas
 - PNEUMONIA: precision 0.75, recall 0.99, F1-score 0.85
 
 ### Classification Report Metrics Visualization
-![Classification Report Metrics](Figures/plots/classification_report_metrics.png)
+<img src="Figures/plots/classification_report_metrics.png" width="450" alt="Classification Report Metrics">
 
 ### 6.2.1 Precision
 Precision measures how many predicted Pneumonia cases were actually Pneumonia. The model achieved high precision for NORMAL (0.96) and strong precision for PNEUMONIA (0.85).
@@ -191,7 +191,7 @@ Recall measures the model's ability to detect actual Pneumonia cases. The model 
 F1-score combines precision and recall into a single balanced metric. The results indicate the model is highly sensitive to Pneumonia while also effectively identifying Normal cases.
 
 ## 6.3 ROC Curve Analysis
-![ROC Curve](Figures/plots/roc_curve.png)
+<img src="Figures/plots/roc_curve.png" width="450" alt="ROC Curve">
 
 The ROC (Receiver Operating Characteristic) curve shows the trade-off between true positive rate and false positive rate. The high AUC (Area Under the Curve) value indicates excellent discrimination between Normal and Pneumonia cases, demonstrating the model's strong predictive power.
 
