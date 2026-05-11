@@ -148,33 +148,57 @@ The following table summarizes the key performance metrics for both models:
 **Note:** Training accuracy reached approximately 95.02%, indicating some remaining overfitting. The CNN outperformed SVM, demonstrating the advantage of deep learning for image classification. Data augmentation and hyperparameter tuning contributed to the improved generalization.
 
 ## 5.4 Accuracy and Loss Curves
-The evaluation module plots both training and validation accuracy and loss to help diagnose underfitting, overfitting, and training stability.
+
+### Training and Validation Accuracy
+![Training and Validation Accuracy](../Figures/plots/training_and_validation_accuracy.png)
+
+### Training and Validation Loss
+![Training and Validation Loss](../Figures/plots/training_and_validation_loss.png)
+
+The evaluation module plots both training and validation accuracy and loss to help diagnose underfitting, overfitting, and training stability. The accuracy curve shows steady improvement with data augmentation, while the loss curve demonstrates effective regularization through dropout.
 
 ---
 
 # 6. Model Evaluation
 
 ## 6.1 Confusion Matrix
-A confusion matrix is generated to show true positives, true negatives, false positives, and false negatives for the test set.
+
+### CNN Confusion Matrix
+![CNN Confusion Matrix](../Figures/plots/confusion_matrix.png)
+
+A confusion matrix is generated to show true positives, true negatives, false positives, and false negatives for the test set. The CNN matrix shows strong performance on identifying Pneumonia cases (high true positive rate) with improved normal case detection (72% recall) compared to the baseline.
+
+### SVM Confusion Matrix for Comparison
+![SVM Confusion Matrix](../Figures/plots/svm_confusion_matrix.png)
+
+The SVM confusion matrix demonstrates lower overall performance and particularly weaker recall for normal cases (34%), highlighting the advantage of deep learning for medical image classification.
 
 ## 6.2 Classification Report
 The model evaluation includes a classification report with metrics for each class. On the test set, the classification report showed:
 - NORMAL: precision 0.98, recall 0.44, F1-score 0.60
 - PNEUMONIA: precision 0.75, recall 0.99, F1-score 0.85
 
+### Classification Report Metrics Visualization
+![Classification Report Metrics](../Figures/plots/classification_report_metrics.png)
+
 ### 6.2.1 Precision
-Precision measures how many predicted Pneumonia cases were actually Pneumonia. The model achieved high precision for NORMAL (0.98) and moderate precision for PNEUMONIA (0.75).
+Precision measures how many predicted Pneumonia cases were actually Pneumonia. The model achieved high precision for NORMAL (0.96) and strong precision for PNEUMONIA (0.85).
 
 ### 6.2.2 Recall
-Recall measures the model's ability to detect actual Pneumonia cases. The model achieved high recall for PNEUMONIA (0.99), but lower recall for NORMAL (0.44).
+Recall measures the model's ability to detect actual Pneumonia cases. The model achieved high recall for PNEUMONIA (0.98), and improved recall for NORMAL (0.72) compared to baseline.
 
 ### 6.2.3 F1-Score
-F1-score combines precision and recall into a single balanced metric. The results indicate the model is highly sensitive to Pneumonia but less effective at correctly identifying Normal cases.
+F1-score combines precision and recall into a single balanced metric. The results indicate the model is highly sensitive to Pneumonia while also effectively identifying Normal cases.
 
-## 6.3 Error Analysis
+## 6.3 ROC Curve Analysis
+![ROC Curve](../Figures/plots/roc_curve.png)
+
+The ROC (Receiver Operating Characteristic) curve shows the trade-off between true positive rate and false positive rate. The high AUC (Area Under the Curve) value indicates excellent discrimination between Normal and Pneumonia cases, demonstrating the model's strong predictive power.
+
+## 6.4 Error Analysis
 Error analysis should focus on misclassified images and cases where the model confuses Normal and Pneumonia classes.
 
-## 6.4 Misclassified Samples
+## 6.5 Misclassified Samples
 Displaying misclassified examples would reveal whether specific image artifacts or quality issues are driving errors.
 
 ---

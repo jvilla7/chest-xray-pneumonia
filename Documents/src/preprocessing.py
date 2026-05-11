@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 
 IMG_SIZE = 128
-# add datSET DIR as a global variable for easier access across modules
+ 
 #DATASET_DIR = "chest_xray"
 DATASET_DIR = r"C:\Users\jvilla24\Documents\GitHub\chest-xray-pneumonia\Documents\data\chest_xray\chest_xray"
 
