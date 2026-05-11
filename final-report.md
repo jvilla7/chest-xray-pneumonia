@@ -1,4 +1,4 @@
-# Chest X-Ray Images (Pneumonia) - Final Report
+# Chest X-Ray Pneumonia Detection - Final Report
 
 **Team Members:** Jesus Villa, Derek Shin, Momoka Aung, Gauri Chahal, Joshua Encinas  
 **Project Lead:** Jesus Villa  
