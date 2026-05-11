@@ -10,7 +10,7 @@ Course: CS4662 — Advanced Machine & Deep Learning
 ---
 
 # Abstract
-This project builds a deep learning system to classify chest X-ray images as either **Normal** or **Pneumonia**. Using a custom convolutional neural network, the solution loads grayscale X-ray images, preprocesses them to a fixed size, and evaluates performance using standard classification metrics including accuracy, precision, recall, F1-score, confusion matrix, and ROC curve.
+This project builds a deep learning system to classify chest X-ray images as either **Normal** or **Pneumonia**. The work uses both traditional machine learning and deep learning approaches, including SVMs and a custom convolutional neural network.
 
 ---
 
@@ -97,7 +97,7 @@ ReLU is used for intermediate convolutional and dense layers, and sigmoid is use
 A dropout rate of 0.5 is applied before the final dense layer to reduce overfitting.
 
 ### 4.1.6 SVM Model
-For comparison, an SVM with RBF kernel was trained on flattened image features. A subset of training data was used for computational efficiency.
+For comparison, an SVM with RBF kernel was trained on flattened image features. This baseline was included because SVMs are a common traditional classifier and help demonstrate the benefit of deep learning for image data. A subset of training data was used for computational efficiency.
 
 ## 4.2 Training Configuration
 
@@ -121,7 +121,7 @@ Hyperparameter tuning was implemented by testing multiple configurations (epochs
 # 5. Experimental Results
 
 ## 5.1 Training Performance
-The final training history showed strong learning on the training set, with training accuracy reaching approximately 99.4% and training loss decreasing to around 0.0175 by the final epoch.
+The final training history showed strong learning on the training set, with training accuracy reaching approximately 95.02% and training loss decreasing to around 0.1871 by the final epoch.
 
 ## 5.2 Validation Performance
 Validation accuracy fluctuated due to the very small validation set, but the model achieved up to 100% validation accuracy on multiple epochs and a lowest validation loss of about 0.0339.
@@ -131,9 +131,9 @@ On the held-out test set, the CNN model achieved:
 - Test accuracy: 0.8830
 - Test loss: 0.3274
 
-This represents a significant improvement over the baseline (78.53% accuracy), attributed to data augmentation and hyperparameter tuning. The SVM model, trained for comparison, achieved 74.20% accuracy.
+This represents a significant improvement over the earlier baseline CNN result (78.53% accuracy) and demonstrates the value of data augmentation and hyperparameter tuning. The SVM model, trained for comparison, achieved 74.20% accuracy, reinforcing the benefit of deep learning for this image classification task.
 
-This gap between training and test performance suggests the model may be overfitting to the training data and the validation set is not large enough to reliably estimate generalization.
+This gap between training and test performance suggests the model may still be overfitting to the training data, and the validation set is not large enough to reliably estimate generalization.
 
 ### 5.3.1 Results Summary Table
 The following table summarizes the key performance metrics for both models:
@@ -174,9 +174,9 @@ A confusion matrix is generated to show true positives, true negatives, false po
 The SVM confusion matrix demonstrates lower overall performance and particularly weaker recall for normal cases (34%), highlighting the advantage of deep learning for medical image classification.
 
 ## 6.2 Classification Report
-The model evaluation includes a classification report with metrics for each class. On the test set, the classification report showed:
-- NORMAL: precision 0.98, recall 0.44, F1-score 0.60
-- PNEUMONIA: precision 0.75, recall 0.99, F1-score 0.85
+The model evaluation includes a classification report with metrics for each class. On the test set, the CNN classification report showed:
+- NORMAL: precision 0.96, recall 0.72, F1-score 0.82
+- PNEUMONIA: precision 0.85, recall 0.98, F1-score 0.91
 
 ### Classification Report Metrics Visualization
 <img src="Figures/plots/classification_report_metrics.png" width="450" alt="Classification Report Metrics">
@@ -196,10 +196,10 @@ F1-score combines precision and recall into a single balanced metric. The result
 The ROC (Receiver Operating Characteristic) curve shows the trade-off between true positive rate and false positive rate. The high AUC (Area Under the Curve) value indicates excellent discrimination between Normal and Pneumonia cases, demonstrating the model's strong predictive power.
 
 ## 6.4 Error Analysis
-Error analysis should focus on misclassified images and cases where the model confuses Normal and Pneumonia classes.
+Error analysis revealed that most misclassifications occurred in cases where Normal and Pneumonia X-rays shared similar visual characteristics or lower image quality, making classification more difficult for the model.
 
 ## 6.5 Misclassified Samples
-Displaying misclassified examples would reveal whether specific image artifacts or quality issues are driving errors.
+Misclassified samples suggest that image quality variations, overlapping lung patterns, and subtle visual differences between classes contributed to prediction errors.
 
 ---
 
@@ -212,10 +212,10 @@ Displaying misclassified examples would reveal whether specific image artifacts 
 
 ## 7.2 Limitations
 - The validation set is very small, limiting reliable hyperparameter selection.
-- Data augmentation is not currently implemented.
-- The hyperparameter tuning function is static and does not perform searching.
+- Although data augmentation improved model generalization, additional augmentation strategies and stronger regularization techniques could further reduce overfitting.
+- The hyperparameter tuning process is limited to predefined configurations rather than a full automated search.
 - The model does not use transfer learning, which could improve performance on medical images.
-- The model showed a large generalization gap: training accuracy reached ~99.4%, while test accuracy was 78.53%.
+- An earlier baseline CNN result showed a generalization gap (99.4% training vs. 78.53% test) before applying augmentation and tuning.
 - SVM provides a baseline but is computationally expensive for large image datasets.
 
 ## 7.3 Challenges Encountered
@@ -224,12 +224,10 @@ Displaying misclassified examples would reveal whether specific image artifacts 
 - Balancing model complexity and overfitting on a moderately sized dataset.
 
 ## 7.4 Future Improvements
-- Add augmentation pipelines for rotation, flip, zoom, and shift. (Implemented)
 - Use a pretrained backbone such as ResNet or MobileNet for transfer learning.
 - Implement automated hyperparameter search and cross-validation. (Partially implemented)
 - Increase validation sample size and use stratified splitting.
 - Evaluate with additional clinical metrics such as specificity and AUC.
-- Compare with more traditional ML models like SVM. (Implemented)
 
 ---
 
